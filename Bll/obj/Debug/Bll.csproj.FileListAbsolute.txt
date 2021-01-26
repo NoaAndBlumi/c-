@@ -1,0 +1,64 @@
+C:\Users\user1\Documents\פרוייקט גמר\MyProject\Bll\bin\Debug\Bll.dll
+C:\Users\user1\Documents\פרוייקט גמר\MyProject\Bll\bin\Debug\Bll.pdb
+C:\Users\user1\Documents\פרוייקט גמר\MyProject\Bll\bin\Debug\converterEF.dll
+C:\Users\user1\Documents\פרוייקט גמר\MyProject\Bll\bin\Debug\Dal.dll
+C:\Users\user1\Documents\פרוייקט גמר\MyProject\Bll\bin\Debug\Dto.dll
+C:\Users\user1\Documents\פרוייקט גמר\MyProject\Bll\bin\Debug\EntityFramework.dll
+C:\Users\user1\Documents\פרוייקט גמר\MyProject\Bll\bin\Debug\converterEF.pdb
+C:\Users\user1\Documents\פרוייקט גמר\MyProject\Bll\bin\Debug\Dal.pdb
+C:\Users\user1\Documents\פרוייקט גמר\MyProject\Bll\bin\Debug\Dal.dll.config
+C:\Users\user1\Documents\פרוייקט גמר\MyProject\Bll\bin\Debug\Dto.pdb
+C:\Users\user1\Documents\פרוייקט גמר\MyProject\Bll\bin\Debug\EntityFramework.xml
+C:\Users\user1\Documents\פרוייקט גמר\MyProject\Bll\obj\Debug\Bll.csprojAssemblyReference.cache
+C:\Users\user1\Documents\פרוייקט גמר\MyProject\Bll\obj\Debug\Bll.csproj.CoreCompileInputs.cache
+C:\Users\user1\Documents\פרוייקט גמר\MyProject\Bll\obj\Debug\Bll.csproj.CopyComplete
+C:\Users\user1\Documents\פרוייקט גמר\MyProject\Bll\obj\Debug\Bll.dll
+C:\Users\user1\Documents\פרוייקט גמר\MyProject\Bll\obj\Debug\Bll.pdb
+C:\Users\user1\Documents\תש''פ\פרוייקט גמר\MyProject\Bll\bin\Debug\Bll.dll
+C:\Users\user1\Documents\תש''פ\פרוייקט גמר\MyProject\Bll\bin\Debug\Bll.pdb
+C:\Users\user1\Documents\תש''פ\פרוייקט גמר\MyProject\Bll\bin\Debug\converterEF.dll
+C:\Users\user1\Documents\תש''פ\פרוייקט גמר\MyProject\Bll\bin\Debug\Dal.dll
+C:\Users\user1\Documents\תש''פ\פרוייקט גמר\MyProject\Bll\bin\Debug\Dto.dll
+C:\Users\user1\Documents\תש''פ\פרוייקט גמר\MyProject\Bll\bin\Debug\EntityFramework.dll
+C:\Users\user1\Documents\תש''פ\פרוייקט גמר\MyProject\Bll\bin\Debug\converterEF.pdb
+C:\Users\user1\Documents\תש''פ\פרוייקט גמר\MyProject\Bll\bin\Debug\Dal.pdb
+C:\Users\user1\Documents\תש''פ\פרוייקט גמר\MyProject\Bll\bin\Debug\Dal.dll.config
+C:\Users\user1\Documents\תש''פ\פרוייקט גמר\MyProject\Bll\bin\Debug\Dto.pdb
+C:\Users\user1\Documents\תש''פ\פרוייקט גמר\MyProject\Bll\bin\Debug\EntityFramework.xml
+C:\Users\user1\Documents\תש''פ\פרוייקט גמר\MyProject\Bll\obj\Debug\Bll.csprojAssemblyReference.cache
+C:\Users\user1\Documents\תש''פ\פרוייקט גמר\MyProject\Bll\obj\Debug\Bll.csproj.CoreCompileInputs.cache
+C:\Users\user1\Documents\תש''פ\פרוייקט גמר\MyProject\Bll\obj\Debug\Bll.csproj.CopyComplete
+C:\Users\user1\Documents\תש''פ\פרוייקט גמר\MyProject\Bll\obj\Debug\Bll.dll
+C:\Users\user1\Documents\תש''פ\פרוייקט גמר\MyProject\Bll\obj\Debug\Bll.pdb
+C:\Users\user1\Desktop\MyProject\Bll\bin\Debug\Bll.dll
+C:\Users\user1\Desktop\MyProject\Bll\bin\Debug\Bll.pdb
+C:\Users\user1\Desktop\MyProject\Bll\bin\Debug\converterEF.dll
+C:\Users\user1\Desktop\MyProject\Bll\bin\Debug\Dal.dll
+C:\Users\user1\Desktop\MyProject\Bll\bin\Debug\Dto.dll
+C:\Users\user1\Desktop\MyProject\Bll\bin\Debug\EntityFramework.dll
+C:\Users\user1\Desktop\MyProject\Bll\bin\Debug\converterEF.pdb
+C:\Users\user1\Desktop\MyProject\Bll\bin\Debug\Dal.pdb
+C:\Users\user1\Desktop\MyProject\Bll\bin\Debug\Dal.dll.config
+C:\Users\user1\Desktop\MyProject\Bll\bin\Debug\Dto.pdb
+C:\Users\user1\Desktop\MyProject\Bll\bin\Debug\EntityFramework.xml
+C:\Users\user1\Desktop\MyProject\Bll\obj\Debug\Bll.csprojAssemblyReference.cache
+C:\Users\user1\Desktop\MyProject\Bll\obj\Debug\Bll.csproj.CoreCompileInputs.cache
+C:\Users\user1\Desktop\MyProject\Bll\obj\Debug\Bll.csproj.CopyComplete
+C:\Users\user1\Desktop\MyProject\Bll\obj\Debug\Bll.dll
+C:\Users\user1\Desktop\MyProject\Bll\obj\Debug\Bll.pdb
+C:\Users\user1\Desktop\פרוייקט\MyProject\Bll\bin\Debug\Bll.dll
+C:\Users\user1\Desktop\פרוייקט\MyProject\Bll\bin\Debug\Bll.pdb
+C:\Users\user1\Desktop\פרוייקט\MyProject\Bll\bin\Debug\converterEF.dll
+C:\Users\user1\Desktop\פרוייקט\MyProject\Bll\bin\Debug\Dal.dll
+C:\Users\user1\Desktop\פרוייקט\MyProject\Bll\bin\Debug\Dto.dll
+C:\Users\user1\Desktop\פרוייקט\MyProject\Bll\bin\Debug\EntityFramework.dll
+C:\Users\user1\Desktop\פרוייקט\MyProject\Bll\bin\Debug\converterEF.pdb
+C:\Users\user1\Desktop\פרוייקט\MyProject\Bll\bin\Debug\Dal.pdb
+C:\Users\user1\Desktop\פרוייקט\MyProject\Bll\bin\Debug\Dal.dll.config
+C:\Users\user1\Desktop\פרוייקט\MyProject\Bll\bin\Debug\Dto.pdb
+C:\Users\user1\Desktop\פרוייקט\MyProject\Bll\bin\Debug\EntityFramework.xml
+C:\Users\user1\Desktop\פרוייקט\MyProject\Bll\obj\Debug\Bll.csprojAssemblyReference.cache
+C:\Users\user1\Desktop\פרוייקט\MyProject\Bll\obj\Debug\Bll.csproj.CoreCompileInputs.cache
+C:\Users\user1\Desktop\פרוייקט\MyProject\Bll\obj\Debug\Bll.csproj.CopyComplete
+C:\Users\user1\Desktop\פרוייקט\MyProject\Bll\obj\Debug\Bll.dll
+C:\Users\user1\Desktop\פרוייקט\MyProject\Bll\obj\Debug\Bll.pdb

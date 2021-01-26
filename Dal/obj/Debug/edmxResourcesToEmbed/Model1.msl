@@ -1,0 +1,272 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="EZER_LAYOLEDETModelStoreContainer" CdmEntityContainer="EZER_LAYOLEDETEntities">
+    <EntitySetMapping Name="Birth">
+      <EntityTypeMapping TypeName="EZER_LAYOLEDETModel.Birth">
+        <MappingFragment StoreEntitySet="Birth">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="BirthDateOfBaby" ColumnName="BirthDateOfBaby" />
+          <ScalarProperty Name="BoyOrGirl" ColumnName="BoyOrGirl" />
+          <ScalarProperty Name="NumOfBabies" ColumnName="NumOfBabies" />
+          <ScalarProperty Name="BirthId" ColumnName="BirthId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Days">
+      <EntityTypeMapping TypeName="EZER_LAYOLEDETModel.Days">
+        <MappingFragment StoreEntitySet="Days">
+          <ScalarProperty Name="DayId" ColumnName="DayId" />
+          <ScalarProperty Name="Describe" ColumnName="Describe" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Kosher">
+      <EntityTypeMapping TypeName="EZER_LAYOLEDETModel.Kosher">
+        <MappingFragment StoreEntitySet="Kosher">
+          <ScalarProperty Name="KosherId" ColumnName="KosherId" />
+          <ScalarProperty Name="Describe" ColumnName="Describe" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Mother">
+      <EntityTypeMapping TypeName="EZER_LAYOLEDETModel.Mother">
+        <MappingFragment StoreEntitySet="Mother">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="NumOfChildren" ColumnName="NumOfChildren" />
+          <ScalarProperty Name="Kosher1" ColumnName="Kosher1" />
+          <ScalarProperty Name="Kosher2" ColumnName="Kosher2" />
+          <ScalarProperty Name="Kosher3" ColumnName="Kosher3" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Roles">
+      <EntityTypeMapping TypeName="EZER_LAYOLEDETModel.Roles">
+        <MappingFragment StoreEntitySet="Roles">
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+          <ScalarProperty Name="Describe" ColumnName="Describe" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ServiceAndDaysToVolunteer">
+      <EntityTypeMapping TypeName="EZER_LAYOLEDETModel.ServiceAndDaysToVolunteer">
+        <MappingFragment StoreEntitySet="ServiceAndDaysToVolunteer">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="BeginningTime" ColumnName="BeginningTime" />
+          <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+          <ScalarProperty Name="ServiceId" ColumnName="ServiceId" />
+          <ScalarProperty Name="ServiceAndDaysToVolunteerId" ColumnName="ServiceAndDaysToVolunteerId" />
+          <ScalarProperty Name="DayId" ColumnName="DayId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ServiceManagementToBirth">
+      <EntityTypeMapping TypeName="EZER_LAYOLEDETModel.ServiceManagementToBirth">
+        <MappingFragment StoreEntitySet="ServiceManagementToBirth">
+          <ScalarProperty Name="BirthId" ColumnName="BirthId" />
+          <ScalarProperty Name="BirthDateOfService" ColumnName="BirthDateOfService" />
+          <ScalarProperty Name="BeginningTime" ColumnName="BeginningTime" />
+          <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+          <ScalarProperty Name="ServiceId" ColumnName="ServiceId" />
+          <ScalarProperty Name="StatusRequest" ColumnName="StatusRequest" />
+          <ScalarProperty Name="ServiceManagementId" ColumnName="ServiceManagementId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Services">
+      <EntityTypeMapping TypeName="EZER_LAYOLEDETModel.Services">
+        <MappingFragment StoreEntitySet="Services">
+          <ScalarProperty Name="ServiceId" ColumnName="ServiceId" />
+          <ScalarProperty Name="Describe" ColumnName="Describe" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ServiceVolunteerToBirth">
+      <EntityTypeMapping TypeName="EZER_LAYOLEDETModel.ServiceVolunteerToBirth">
+        <MappingFragment StoreEntitySet="ServiceVolunteerToBirth">
+          <ScalarProperty Name="ServiceId" ColumnName="ServiceId" />
+          <ScalarProperty Name="VolunteerId" ColumnName="VolunteerId" />
+          <ScalarProperty Name="MotherId" ColumnName="MotherId" />
+          <ScalarProperty Name="BirthId" ColumnName="BirthId" />
+          <ScalarProperty Name="DateItWas" ColumnName="DateItWas" />
+          <ScalarProperty Name="BeginningTime" ColumnName="BeginningTime" />
+          <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="EZER_LAYOLEDETModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="EZER_LAYOLEDETModel.Users">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="NumOfHouse" ColumnName="NumOfHouse" />
+          <ScalarProperty Name="Locality" ColumnName="Locality" />
+          <ScalarProperty Name="BirthDate" ColumnName="BirthDate" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Volunteer">
+      <EntityTypeMapping TypeName="EZER_LAYOLEDETModel.Volunteer">
+        <MappingFragment StoreEntitySet="Volunteer">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="AllRequest" FunctionName="EZER_LAYOLEDETModel.Store.AllRequest">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EZER_LAYOLEDETModel.AllRequest_Result">
+          <ScalarProperty Name="ServiceId" ColumnName="ServiceId" />
+          <ScalarProperty Name="BirthDateOfService" ColumnName="BirthDateOfService" />
+          <ScalarProperty Name="BirthId" ColumnName="BirthId" />
+          <ScalarProperty Name="BeginningTime" ColumnName="BeginningTime" />
+          <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+          <ScalarProperty Name="ServiceManagementId" ColumnName="ServiceManagementId" />
+          <ScalarProperty Name="StatusRequest" ColumnName="StatusRequest" />
+          <ScalarProperty Name="Describe" ColumnName="Describe" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetRequestByDay" FunctionName="EZER_LAYOLEDETModel.Store.GetRequestByDay">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EZER_LAYOLEDETModel.GetRequestByDay_Result">
+          <ScalarProperty Name="ServiceId" ColumnName="ServiceId" />
+          <ScalarProperty Name="BirthDateOfService" ColumnName="BirthDateOfService" />
+          <ScalarProperty Name="BirthId" ColumnName="BirthId" />
+          <ScalarProperty Name="BeginningTime" ColumnName="BeginningTime" />
+          <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+          <ScalarProperty Name="ServiceManagementId" ColumnName="ServiceManagementId" />
+          <ScalarProperty Name="StatusRequest" ColumnName="StatusRequest" />
+          <ScalarProperty Name="Describe" ColumnName="Describe" />
+          <ScalarProperty Name="DayId" ColumnName="DayId" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="GetRequestByService" FunctionName="EZER_LAYOLEDETModel.Store.GetRequestByService">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EZER_LAYOLEDETModel.GetRequestByService_Result">
+          <ScalarProperty Name="ServiceId" ColumnName="ServiceId" />
+          <ScalarProperty Name="BirthDateOfService" ColumnName="BirthDateOfService" />
+          <ScalarProperty Name="BirthId" ColumnName="BirthId" />
+          <ScalarProperty Name="BeginningTime" ColumnName="BeginningTime" />
+          <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+          <ScalarProperty Name="ServiceManagementId" ColumnName="ServiceManagementId" />
+          <ScalarProperty Name="StatusRequest" ColumnName="StatusRequest" />
+          <ScalarProperty Name="Describe" ColumnName="Describe" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="selectMotherByServiceAndDay" FunctionName="EZER_LAYOLEDETModel.Store.selectMotherByServiceAndDay">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EZER_LAYOLEDETModel.selectMotherByServiceAndDay_Result">
+          <ScalarProperty Name="volunteerId" ColumnName="volunteerId" />
+          <ScalarProperty Name="DescribeDay" ColumnName="DescribeDay" />
+          <ScalarProperty Name="DescribeService" ColumnName="DescribeService" />
+          <ScalarProperty Name="BirthDateOfService" ColumnName="BirthDateOfService" />
+          <ScalarProperty Name="ServiceManagementId" ColumnName="ServiceManagementId" />
+          <ScalarProperty Name="MotherEmail" ColumnName="MotherEmail" />
+          <ScalarProperty Name="MotherName" ColumnName="MotherName" />
+          <ScalarProperty Name="StatusRequest" ColumnName="StatusRequest" />
+          <ScalarProperty Name="motherId" ColumnName="motherId" />
+          <ScalarProperty Name="BirthId" ColumnName="BirthId" />
+          <ScalarProperty Name="volunteerEmail" ColumnName="volunteerEmail" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SelectVolunteerByServiceAndDayNew" FunctionName="EZER_LAYOLEDETModel.Store.SelectVolunteerByServiceAndDayNew">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EZER_LAYOLEDETModel.SelectVolunteerByServiceAndDayNew_Result">
+          <ScalarProperty Name="volunteerId" ColumnName="volunteerId" />
+          <ScalarProperty Name="DescribeDay" ColumnName="DescribeDay" />
+          <ScalarProperty Name="DescribeService" ColumnName="DescribeService" />
+          <ScalarProperty Name="BirthDateOfService" ColumnName="BirthDateOfService" />
+          <ScalarProperty Name="ServiceManagementId" ColumnName="ServiceManagementId" />
+          <ScalarProperty Name="volunteerEmail" ColumnName="volunteerEmail" />
+          <ScalarProperty Name="volunteerName" ColumnName="volunteerName" />
+          <ScalarProperty Name="StatusRequest" ColumnName="StatusRequest" />
+          <ScalarProperty Name="motherId" ColumnName="motherId" />
+          <ScalarProperty Name="BirthId" ColumnName="BirthId" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SelectVolunteerByServiceNew" FunctionName="EZER_LAYOLEDETModel.Store.SelectVolunteerByServiceNew">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EZER_LAYOLEDETModel.SelectVolunteerByServiceNew_Result">
+          <ScalarProperty Name="volunteer" ColumnName="volunteer" />
+          <ScalarProperty Name="BirthId" ColumnName="BirthId" />
+          <ScalarProperty Name="mother" ColumnName="mother" />
+          <ScalarProperty Name="ServiceManagementId" ColumnName="ServiceManagementId" />
+          <ScalarProperty Name="StatusRequest" ColumnName="StatusRequest" />
+          <ScalarProperty Name="MotherEmail" ColumnName="MotherEmail" />
+          <ScalarProperty Name="DayId" ColumnName="DayId" />
+          <ScalarProperty Name="MotherDay" ColumnName="MotherDay" />
+          <ScalarProperty Name="VolunteerName" ColumnName="VolunteerName" />
+          <ScalarProperty Name="TheService" ColumnName="TheService" />
+          <ScalarProperty Name="volunteerEmail" ColumnName="volunteerEmail" />
+          <ScalarProperty Name="serviceId" ColumnName="serviceId" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="EZER_LAYOLEDETModel.Store.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="EZER_LAYOLEDETModel.Store.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="EZER_LAYOLEDETModel.Store.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="EZER_LAYOLEDETModel.Store.sp_helpdiagramdefinition">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EZER_LAYOLEDETModel.sp_helpdiagramdefinition_Result">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="EZER_LAYOLEDETModel.Store.sp_helpdiagrams">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EZER_LAYOLEDETModel.sp_helpdiagrams_Result">
+          <ScalarProperty Name="Database" ColumnName="Database" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="EZER_LAYOLEDETModel.Store.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="EZER_LAYOLEDETModel.Store.sp_upgraddiagrams" />
+    <FunctionImportMapping FunctionImportName="VolunteerApproval" FunctionName="EZER_LAYOLEDETModel.Store.VolunteerApproval">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="EZER_LAYOLEDETModel.VolunteerApproval_Result">
+          <ScalarProperty Name="MotherEmail" ColumnName="MotherEmail" />
+          <ScalarProperty Name="MotherFirstName" ColumnName="MotherFirstName" />
+          <ScalarProperty Name="MotherLastName" ColumnName="MotherLastName" />
+          <ScalarProperty Name="MotherPhone" ColumnName="MotherPhone" />
+          <ScalarProperty Name="MotherAddress" ColumnName="MotherAddress" />
+          <ScalarProperty Name="MotherNumOfHouse" ColumnName="MotherNumOfHouse" />
+          <ScalarProperty Name="DescribeVolunteer" ColumnName="DescribeVolunteer" />
+          <ScalarProperty Name="BeginningTime" ColumnName="BeginningTime" />
+          <ScalarProperty Name="VolunteerName" ColumnName="VolunteerName" />
+          <ScalarProperty Name="VolunteerPhone" ColumnName="VolunteerPhone" />
+          <ScalarProperty Name="BirthId" ColumnName="BirthId" />
+          <ScalarProperty Name="ServiceId" ColumnName="ServiceId" />
+          <ScalarProperty Name="MotherId" ColumnName="MotherId" />
+          <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+          <ScalarProperty Name="BirthDateOfService" ColumnName="BirthDateOfService" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,56 @@
+C:\Users\user1\Documents\פרוייקט גמר\MyProject\converterEF\bin\Debug\converterEF.dll
+C:\Users\user1\Documents\פרוייקט גמר\MyProject\converterEF\bin\Debug\converterEF.pdb
+C:\Users\user1\Documents\פרוייקט גמר\MyProject\converterEF\bin\Debug\Dal.dll
+C:\Users\user1\Documents\פרוייקט גמר\MyProject\converterEF\bin\Debug\Dto.dll
+C:\Users\user1\Documents\פרוייקט גמר\MyProject\converterEF\bin\Debug\EntityFramework.dll
+C:\Users\user1\Documents\פרוייקט גמר\MyProject\converterEF\bin\Debug\Dal.pdb
+C:\Users\user1\Documents\פרוייקט גמר\MyProject\converterEF\bin\Debug\Dal.dll.config
+C:\Users\user1\Documents\פרוייקט גמר\MyProject\converterEF\bin\Debug\Dto.pdb
+C:\Users\user1\Documents\פרוייקט גמר\MyProject\converterEF\bin\Debug\EntityFramework.xml
+C:\Users\user1\Documents\פרוייקט גמר\MyProject\converterEF\obj\Debug\converterEF.csprojAssemblyReference.cache
+C:\Users\user1\Documents\פרוייקט גמר\MyProject\converterEF\obj\Debug\converterEF.csproj.CoreCompileInputs.cache
+C:\Users\user1\Documents\פרוייקט גמר\MyProject\converterEF\obj\Debug\converterEF.csproj.CopyComplete
+C:\Users\user1\Documents\פרוייקט גמר\MyProject\converterEF\obj\Debug\converterEF.dll
+C:\Users\user1\Documents\פרוייקט גמר\MyProject\converterEF\obj\Debug\converterEF.pdb
+C:\Users\user1\Documents\תש''פ\פרוייקט גמר\MyProject\converterEF\bin\Debug\converterEF.dll
+C:\Users\user1\Documents\תש''פ\פרוייקט גמר\MyProject\converterEF\bin\Debug\converterEF.pdb
+C:\Users\user1\Documents\תש''פ\פרוייקט גמר\MyProject\converterEF\bin\Debug\Dal.dll
+C:\Users\user1\Documents\תש''פ\פרוייקט גמר\MyProject\converterEF\bin\Debug\Dto.dll
+C:\Users\user1\Documents\תש''פ\פרוייקט גמר\MyProject\converterEF\bin\Debug\EntityFramework.dll
+C:\Users\user1\Documents\תש''פ\פרוייקט גמר\MyProject\converterEF\bin\Debug\Dal.pdb
+C:\Users\user1\Documents\תש''פ\פרוייקט גמר\MyProject\converterEF\bin\Debug\Dal.dll.config
+C:\Users\user1\Documents\תש''פ\פרוייקט גמר\MyProject\converterEF\bin\Debug\Dto.pdb
+C:\Users\user1\Documents\תש''פ\פרוייקט גמר\MyProject\converterEF\bin\Debug\EntityFramework.xml
+C:\Users\user1\Documents\תש''פ\פרוייקט גמר\MyProject\converterEF\obj\Debug\converterEF.csprojAssemblyReference.cache
+C:\Users\user1\Documents\תש''פ\פרוייקט גמר\MyProject\converterEF\obj\Debug\converterEF.csproj.CoreCompileInputs.cache
+C:\Users\user1\Documents\תש''פ\פרוייקט גמר\MyProject\converterEF\obj\Debug\converterEF.csproj.CopyComplete
+C:\Users\user1\Documents\תש''פ\פרוייקט גמר\MyProject\converterEF\obj\Debug\converterEF.dll
+C:\Users\user1\Documents\תש''פ\פרוייקט גמר\MyProject\converterEF\obj\Debug\converterEF.pdb
+C:\Users\user1\Desktop\MyProject\converterEF\bin\Debug\converterEF.dll
+C:\Users\user1\Desktop\MyProject\converterEF\bin\Debug\converterEF.pdb
+C:\Users\user1\Desktop\MyProject\converterEF\bin\Debug\Dal.dll
+C:\Users\user1\Desktop\MyProject\converterEF\bin\Debug\Dto.dll
+C:\Users\user1\Desktop\MyProject\converterEF\bin\Debug\EntityFramework.dll
+C:\Users\user1\Desktop\MyProject\converterEF\bin\Debug\Dal.pdb
+C:\Users\user1\Desktop\MyProject\converterEF\bin\Debug\Dal.dll.config
+C:\Users\user1\Desktop\MyProject\converterEF\bin\Debug\Dto.pdb
+C:\Users\user1\Desktop\MyProject\converterEF\bin\Debug\EntityFramework.xml
+C:\Users\user1\Desktop\MyProject\converterEF\obj\Debug\converterEF.csprojAssemblyReference.cache
+C:\Users\user1\Desktop\MyProject\converterEF\obj\Debug\converterEF.csproj.CoreCompileInputs.cache
+C:\Users\user1\Desktop\MyProject\converterEF\obj\Debug\converterEF.csproj.CopyComplete
+C:\Users\user1\Desktop\MyProject\converterEF\obj\Debug\converterEF.dll
+C:\Users\user1\Desktop\MyProject\converterEF\obj\Debug\converterEF.pdb
+C:\Users\user1\Desktop\פרוייקט\MyProject\converterEF\bin\Debug\converterEF.dll
+C:\Users\user1\Desktop\פרוייקט\MyProject\converterEF\bin\Debug\converterEF.pdb
+C:\Users\user1\Desktop\פרוייקט\MyProject\converterEF\bin\Debug\Dal.dll
+C:\Users\user1\Desktop\פרוייקט\MyProject\converterEF\bin\Debug\Dto.dll
+C:\Users\user1\Desktop\פרוייקט\MyProject\converterEF\bin\Debug\EntityFramework.dll
+C:\Users\user1\Desktop\פרוייקט\MyProject\converterEF\bin\Debug\Dal.pdb
+C:\Users\user1\Desktop\פרוייקט\MyProject\converterEF\bin\Debug\Dal.dll.config
+C:\Users\user1\Desktop\פרוייקט\MyProject\converterEF\bin\Debug\Dto.pdb
+C:\Users\user1\Desktop\פרוייקט\MyProject\converterEF\bin\Debug\EntityFramework.xml
+C:\Users\user1\Desktop\פרוייקט\MyProject\converterEF\obj\Debug\converterEF.csprojAssemblyReference.cache
+C:\Users\user1\Desktop\פרוייקט\MyProject\converterEF\obj\Debug\converterEF.csproj.CoreCompileInputs.cache
+C:\Users\user1\Desktop\פרוייקט\MyProject\converterEF\obj\Debug\converterEF.csproj.CopyComplete
+C:\Users\user1\Desktop\פרוייקט\MyProject\converterEF\obj\Debug\converterEF.dll
+C:\Users\user1\Desktop\פרוייקט\MyProject\converterEF\obj\Debug\converterEF.pdb

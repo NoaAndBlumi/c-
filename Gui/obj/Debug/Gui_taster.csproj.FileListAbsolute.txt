@@ -1,0 +1,96 @@
+C:\Users\user1\Documents\פרוייקט גמר\MyProject\Gui\bin\Debug\Gui.exe.config
+C:\Users\user1\Documents\פרוייקט גמר\MyProject\Gui\bin\Debug\Gui.exe
+C:\Users\user1\Documents\פרוייקט גמר\MyProject\Gui\bin\Debug\Gui.pdb
+C:\Users\user1\Documents\פרוייקט גמר\MyProject\Gui\bin\Debug\Bll.dll
+C:\Users\user1\Documents\פרוייקט גמר\MyProject\Gui\bin\Debug\Dto.dll
+C:\Users\user1\Documents\פרוייקט גמר\MyProject\Gui\bin\Debug\Dal.dll
+C:\Users\user1\Documents\פרוייקט גמר\MyProject\Gui\bin\Debug\converterEF.dll
+C:\Users\user1\Documents\פרוייקט גמר\MyProject\Gui\bin\Debug\Bll.pdb
+C:\Users\user1\Documents\פרוייקט גמר\MyProject\Gui\bin\Debug\Dto.pdb
+C:\Users\user1\Documents\פרוייקט גמר\MyProject\Gui\bin\Debug\EntityFramework.xml
+C:\Users\user1\Documents\פרוייקט גמר\MyProject\Gui\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\user1\Documents\פרוייקט גמר\MyProject\Gui\bin\Debug\Dal.pdb
+C:\Users\user1\Documents\פרוייקט גמר\MyProject\Gui\bin\Debug\Dal.dll.config
+C:\Users\user1\Documents\פרוייקט גמר\MyProject\Gui\bin\Debug\converterEF.pdb
+C:\Users\user1\Documents\פרוייקט גמר\MyProject\Gui\obj\Debug\Gui_taster.csprojAssemblyReference.cache
+C:\Users\user1\Documents\פרוייקט גמר\MyProject\Gui\obj\Debug\Gui.Form1.resources
+C:\Users\user1\Documents\פרוייקט גמר\MyProject\Gui\obj\Debug\Gui.Properties.Resources.resources
+C:\Users\user1\Documents\פרוייקט גמר\MyProject\Gui\obj\Debug\Gui_taster.csproj.GenerateResource.cache
+C:\Users\user1\Documents\פרוייקט גמר\MyProject\Gui\obj\Debug\Gui_taster.csproj.CoreCompileInputs.cache
+C:\Users\user1\Documents\פרוייקט גמר\MyProject\Gui\obj\Debug\Gui_taster.csproj.CopyComplete
+C:\Users\user1\Documents\פרוייקט גמר\MyProject\Gui\obj\Debug\Gui.exe
+C:\Users\user1\Documents\פרוייקט גמר\MyProject\Gui\obj\Debug\Gui.pdb
+C:\Users\user1\Documents\פרוייקט גמר\MyProject\Gui\bin\Debug\EntityFramework.dll
+C:\Users\user1\Documents\פרוייקט גמר\MyProject\Gui\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\user1\Documents\תש''פ\פרוייקט גמר\MyProject\Gui\bin\Debug\Gui.exe.config
+C:\Users\user1\Documents\תש''פ\פרוייקט גמר\MyProject\Gui\bin\Debug\Gui.exe
+C:\Users\user1\Documents\תש''פ\פרוייקט גמר\MyProject\Gui\bin\Debug\Gui.pdb
+C:\Users\user1\Documents\תש''פ\פרוייקט גמר\MyProject\Gui\bin\Debug\Bll.dll
+C:\Users\user1\Documents\תש''פ\פרוייקט גמר\MyProject\Gui\bin\Debug\Dto.dll
+C:\Users\user1\Documents\תש''פ\פרוייקט גמר\MyProject\Gui\bin\Debug\EntityFramework.dll
+C:\Users\user1\Documents\תש''פ\פרוייקט גמר\MyProject\Gui\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\user1\Documents\תש''פ\פרוייקט גמר\MyProject\Gui\bin\Debug\Dal.dll
+C:\Users\user1\Documents\תש''פ\פרוייקט גמר\MyProject\Gui\bin\Debug\converterEF.dll
+C:\Users\user1\Documents\תש''פ\פרוייקט גמר\MyProject\Gui\bin\Debug\Bll.pdb
+C:\Users\user1\Documents\תש''פ\פרוייקט גמר\MyProject\Gui\bin\Debug\Dto.pdb
+C:\Users\user1\Documents\תש''פ\פרוייקט גמר\MyProject\Gui\bin\Debug\EntityFramework.xml
+C:\Users\user1\Documents\תש''פ\פרוייקט גמר\MyProject\Gui\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\user1\Documents\תש''פ\פרוייקט גמר\MyProject\Gui\bin\Debug\Dal.pdb
+C:\Users\user1\Documents\תש''פ\פרוייקט גמר\MyProject\Gui\bin\Debug\Dal.dll.config
+C:\Users\user1\Documents\תש''פ\פרוייקט גמר\MyProject\Gui\bin\Debug\converterEF.pdb
+C:\Users\user1\Documents\תש''פ\פרוייקט גמר\MyProject\Gui\obj\Debug\Gui_taster.csprojAssemblyReference.cache
+C:\Users\user1\Documents\תש''פ\פרוייקט גמר\MyProject\Gui\obj\Debug\Gui.Form1.resources
+C:\Users\user1\Documents\תש''פ\פרוייקט גמר\MyProject\Gui\obj\Debug\Gui.Properties.Resources.resources
+C:\Users\user1\Documents\תש''פ\פרוייקט גמר\MyProject\Gui\obj\Debug\Gui_taster.csproj.GenerateResource.cache
+C:\Users\user1\Documents\תש''פ\פרוייקט גמר\MyProject\Gui\obj\Debug\Gui_taster.csproj.CoreCompileInputs.cache
+C:\Users\user1\Documents\תש''פ\פרוייקט גמר\MyProject\Gui\obj\Debug\Gui_taster.csproj.CopyComplete
+C:\Users\user1\Documents\תש''פ\פרוייקט גמר\MyProject\Gui\obj\Debug\Gui.exe
+C:\Users\user1\Documents\תש''פ\פרוייקט גמר\MyProject\Gui\obj\Debug\Gui.pdb
+C:\Users\user1\Desktop\MyProject\Gui\bin\Debug\Gui.exe.config
+C:\Users\user1\Desktop\MyProject\Gui\bin\Debug\Gui.exe
+C:\Users\user1\Desktop\MyProject\Gui\bin\Debug\Gui.pdb
+C:\Users\user1\Desktop\MyProject\Gui\bin\Debug\Bll.dll
+C:\Users\user1\Desktop\MyProject\Gui\bin\Debug\Dto.dll
+C:\Users\user1\Desktop\MyProject\Gui\bin\Debug\EntityFramework.dll
+C:\Users\user1\Desktop\MyProject\Gui\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\user1\Desktop\MyProject\Gui\bin\Debug\Dal.dll
+C:\Users\user1\Desktop\MyProject\Gui\bin\Debug\converterEF.dll
+C:\Users\user1\Desktop\MyProject\Gui\bin\Debug\Bll.pdb
+C:\Users\user1\Desktop\MyProject\Gui\bin\Debug\Dto.pdb
+C:\Users\user1\Desktop\MyProject\Gui\bin\Debug\EntityFramework.xml
+C:\Users\user1\Desktop\MyProject\Gui\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\user1\Desktop\MyProject\Gui\bin\Debug\Dal.pdb
+C:\Users\user1\Desktop\MyProject\Gui\bin\Debug\Dal.dll.config
+C:\Users\user1\Desktop\MyProject\Gui\bin\Debug\converterEF.pdb
+C:\Users\user1\Desktop\MyProject\Gui\obj\Debug\Gui_taster.csprojAssemblyReference.cache
+C:\Users\user1\Desktop\MyProject\Gui\obj\Debug\Gui.Form1.resources
+C:\Users\user1\Desktop\MyProject\Gui\obj\Debug\Gui.Properties.Resources.resources
+C:\Users\user1\Desktop\MyProject\Gui\obj\Debug\Gui_taster.csproj.GenerateResource.cache
+C:\Users\user1\Desktop\MyProject\Gui\obj\Debug\Gui_taster.csproj.CoreCompileInputs.cache
+C:\Users\user1\Desktop\MyProject\Gui\obj\Debug\Gui_taster.csproj.CopyComplete
+C:\Users\user1\Desktop\MyProject\Gui\obj\Debug\Gui.exe
+C:\Users\user1\Desktop\MyProject\Gui\obj\Debug\Gui.pdb
+C:\Users\user1\Desktop\פרוייקט\MyProject\Gui\bin\Debug\Gui.exe.config
+C:\Users\user1\Desktop\פרוייקט\MyProject\Gui\bin\Debug\Gui.exe
+C:\Users\user1\Desktop\פרוייקט\MyProject\Gui\bin\Debug\Gui.pdb
+C:\Users\user1\Desktop\פרוייקט\MyProject\Gui\bin\Debug\Bll.dll
+C:\Users\user1\Desktop\פרוייקט\MyProject\Gui\bin\Debug\Dto.dll
+C:\Users\user1\Desktop\פרוייקט\MyProject\Gui\bin\Debug\EntityFramework.dll
+C:\Users\user1\Desktop\פרוייקט\MyProject\Gui\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\user1\Desktop\פרוייקט\MyProject\Gui\bin\Debug\Dal.dll
+C:\Users\user1\Desktop\פרוייקט\MyProject\Gui\bin\Debug\converterEF.dll
+C:\Users\user1\Desktop\פרוייקט\MyProject\Gui\bin\Debug\Bll.pdb
+C:\Users\user1\Desktop\פרוייקט\MyProject\Gui\bin\Debug\Dto.pdb
+C:\Users\user1\Desktop\פרוייקט\MyProject\Gui\bin\Debug\EntityFramework.xml
+C:\Users\user1\Desktop\פרוייקט\MyProject\Gui\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\user1\Desktop\פרוייקט\MyProject\Gui\bin\Debug\Dal.pdb
+C:\Users\user1\Desktop\פרוייקט\MyProject\Gui\bin\Debug\Dal.dll.config
+C:\Users\user1\Desktop\פרוייקט\MyProject\Gui\bin\Debug\converterEF.pdb
+C:\Users\user1\Desktop\פרוייקט\MyProject\Gui\obj\Debug\Gui_taster.csprojAssemblyReference.cache
+C:\Users\user1\Desktop\פרוייקט\MyProject\Gui\obj\Debug\Gui.Form1.resources
+C:\Users\user1\Desktop\פרוייקט\MyProject\Gui\obj\Debug\Gui.Properties.Resources.resources
+C:\Users\user1\Desktop\פרוייקט\MyProject\Gui\obj\Debug\Gui_taster.csproj.GenerateResource.cache
+C:\Users\user1\Desktop\פרוייקט\MyProject\Gui\obj\Debug\Gui_taster.csproj.CoreCompileInputs.cache
+C:\Users\user1\Desktop\פרוייקט\MyProject\Gui\obj\Debug\Gui_taster.csproj.CopyComplete
+C:\Users\user1\Desktop\פרוייקט\MyProject\Gui\obj\Debug\Gui.exe
+C:\Users\user1\Desktop\פרוייקט\MyProject\Gui\obj\Debug\Gui.pdb

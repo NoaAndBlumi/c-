@@ -1,0 +1,1176 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="EZER_LAYOLEDETModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Birth">
+          <Key>
+            <PropertyRef Name="BirthId" />
+          </Key>
+          <Property Name="UserId" Type="bigint" Nullable="false" />
+          <Property Name="BirthDateOfBaby" Type="date" Nullable="false" />
+          <Property Name="BoyOrGirl" Type="varchar" MaxLength="50" />
+          <Property Name="NumOfBabies" Type="bigint" />
+          <Property Name="BirthId" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Days">
+          <Key>
+            <PropertyRef Name="DayId" />
+          </Key>
+          <Property Name="DayId" Type="bigint" Nullable="false" />
+          <Property Name="Describe" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Kosher">
+          <Key>
+            <PropertyRef Name="KosherId" />
+          </Key>
+          <Property Name="KosherId" Type="bigint" Nullable="false" />
+          <Property Name="Describe" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Mother">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="UserId" Type="bigint" Nullable="false" />
+          <Property Name="NumOfChildren" Type="int" />
+          <Property Name="Kosher1" Type="bigint" />
+          <Property Name="Kosher2" Type="bigint" />
+          <Property Name="Kosher3" Type="bigint" />
+        </EntityType>
+        <EntityType Name="Roles">
+          <Key>
+            <PropertyRef Name="RoleId" />
+          </Key>
+          <Property Name="RoleId" Type="bigint" Nullable="false" />
+          <Property Name="Describe" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ServiceAndDaysToVolunteer">
+          <Key>
+            <PropertyRef Name="ServiceAndDaysToVolunteerId" />
+          </Key>
+          <Property Name="UserId" Type="bigint" Nullable="false" />
+          <Property Name="BeginningTime" Type="time" Precision="7" />
+          <Property Name="EndTime" Type="time" Precision="7" />
+          <Property Name="ServiceId" Type="bigint" Nullable="false" />
+          <Property Name="ServiceAndDaysToVolunteerId" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DayId" Type="bigint" />
+        </EntityType>
+        <EntityType Name="ServiceManagementToBirth">
+          <Key>
+            <PropertyRef Name="ServiceId" />
+          </Key>
+          <Property Name="BirthId" Type="bigint" Nullable="false" />
+          <Property Name="BirthDateOfService" Type="date" Nullable="false" />
+          <Property Name="BeginningTime" Type="time" Precision="7" />
+          <Property Name="EndTime" Type="time" Precision="7" />
+          <Property Name="ServiceId" Type="bigint" Nullable="false" />
+          <Property Name="StatusRequest" Type="int" Nullable="false" />
+          <Property Name="ServiceManagementId" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Services">
+          <Key>
+            <PropertyRef Name="ServiceId" />
+          </Key>
+          <Property Name="ServiceId" Type="bigint" Nullable="false" />
+          <Property Name="Describe" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="ServiceVolunteerToBirth">
+          <Key>
+            <PropertyRef Name="ServiceId" />
+          </Key>
+          <Property Name="ServiceId" Type="bigint" Nullable="false" />
+          <Property Name="VolunteerId" Type="bigint" Nullable="false" />
+          <Property Name="MotherId" Type="bigint" Nullable="false" />
+          <Property Name="BirthId" Type="bigint" Nullable="false" />
+          <Property Name="DateItWas" Type="date" Nullable="false" />
+          <Property Name="BeginningTime" Type="time" Precision="7" />
+          <Property Name="EndTime" Type="time" Precision="7" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="UserId" Type="bigint" Nullable="false" />
+          <Property Name="RoleId" Type="bigint" Nullable="false" />
+          <Property Name="LastName" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Password" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Email" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Phone" Type="bigint" Nullable="false" />
+          <Property Name="Address" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="NumOfHouse" Type="bigint" Nullable="false" />
+          <Property Name="Locality" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="BirthDate" Type="date" Nullable="false" />
+          <Property Name="Active" Type="int" Nullable="false" />
+          <Property Name="FirstName" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="Volunteer">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="UserId" Type="bigint" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_Birth_Mother">
+          <End Role="Mother" Type="Self.Mother" Multiplicity="1" />
+          <End Role="Birth" Type="Self.Birth" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Mother">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="Birth">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DaysToVolunteer_Volunteer">
+          <End Role="Volunteer" Type="Self.Volunteer" Multiplicity="1" />
+          <End Role="ServiceAndDaysToVolunteer" Type="Self.ServiceAndDaysToVolunteer" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Volunteer">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="ServiceAndDaysToVolunteer">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Mother_Kosher">
+          <End Role="Kosher" Type="Self.Kosher" Multiplicity="0..1" />
+          <End Role="Mother" Type="Self.Mother" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Kosher">
+              <PropertyRef Name="KosherId" />
+            </Principal>
+            <Dependent Role="Mother">
+              <PropertyRef Name="Kosher1" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Mother_Kosher1">
+          <End Role="Kosher" Type="Self.Kosher" Multiplicity="0..1" />
+          <End Role="Mother" Type="Self.Mother" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Kosher">
+              <PropertyRef Name="KosherId" />
+            </Principal>
+            <Dependent Role="Mother">
+              <PropertyRef Name="Kosher2" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Mother_Kosher2">
+          <End Role="Kosher" Type="Self.Kosher" Multiplicity="0..1" />
+          <End Role="Mother" Type="Self.Mother" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Kosher">
+              <PropertyRef Name="KosherId" />
+            </Principal>
+            <Dependent Role="Mother">
+              <PropertyRef Name="Kosher3" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Mother_Users">
+          <End Role="Users" Type="Self.Users" Multiplicity="1" />
+          <End Role="Mother" Type="Self.Mother" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="Mother">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ServiceAndDaysToVolunteer_Days">
+          <End Role="Days" Type="Self.Days" Multiplicity="0..1" />
+          <End Role="ServiceAndDaysToVolunteer" Type="Self.ServiceAndDaysToVolunteer" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Days">
+              <PropertyRef Name="DayId" />
+            </Principal>
+            <Dependent Role="ServiceAndDaysToVolunteer">
+              <PropertyRef Name="DayId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ServiceAndDaysToVolunteer_Services">
+          <End Role="Services" Type="Self.Services" Multiplicity="1" />
+          <End Role="ServiceAndDaysToVolunteer" Type="Self.ServiceAndDaysToVolunteer" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Services">
+              <PropertyRef Name="ServiceId" />
+            </Principal>
+            <Dependent Role="ServiceAndDaysToVolunteer">
+              <PropertyRef Name="ServiceId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ServiceManagementToBirth_Birth">
+          <End Role="Birth" Type="Self.Birth" Multiplicity="1" />
+          <End Role="ServiceManagementToBirth" Type="Self.ServiceManagementToBirth" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Birth">
+              <PropertyRef Name="BirthId" />
+            </Principal>
+            <Dependent Role="ServiceManagementToBirth">
+              <PropertyRef Name="BirthId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ServiceVolunteerToBirth_ServiceManagementToBirth">
+          <End Role="ServiceManagementToBirth" Type="Self.ServiceManagementToBirth" Multiplicity="1" />
+          <End Role="ServiceVolunteerToBirth" Type="Self.ServiceVolunteerToBirth" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="ServiceManagementToBirth">
+              <PropertyRef Name="ServiceId" />
+            </Principal>
+            <Dependent Role="ServiceVolunteerToBirth">
+              <PropertyRef Name="ServiceId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Users_Roles1">
+          <End Role="Roles" Type="Self.Roles" Multiplicity="1" />
+          <End Role="Users" Type="Self.Users" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Roles">
+              <PropertyRef Name="RoleId" />
+            </Principal>
+            <Dependent Role="Users">
+              <PropertyRef Name="RoleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Volunteer_Users">
+          <End Role="Users" Type="Self.Users" Multiplicity="1" />
+          <End Role="Volunteer" Type="Self.Volunteer" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="Volunteer">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="AllRequest" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+        <Function Name="GetRequestByDay" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="DayId" Type="bigint" Mode="In" />
+        </Function>
+        <Function Name="GetRequestByService" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ServiceId" Type="bigint" Mode="In" />
+        </Function>
+        <Function Name="selectMotherByServiceAndDay" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="VolunteerId" Type="bigint" Mode="In" />
+        </Function>
+        <Function Name="SelectVolunteerByServiceAndDayNew" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="motherId" Type="bigint" Mode="In" />
+        </Function>
+        <Function Name="SelectVolunteerByServiceNew" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="UserId" Type="bigint" Mode="In" />
+        </Function>
+        <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="version" Type="int" Mode="In" />
+          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="version" Type="int" Mode="In" />
+          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="VolunteerApproval" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ServiceManagmentId" Type="bigint" Mode="In" />
+          <Parameter Name="VolunteerId" Type="bigint" Mode="In" />
+        </Function>
+        <EntityContainer Name="EZER_LAYOLEDETModelStoreContainer">
+          <EntitySet Name="Birth" EntityType="Self.Birth" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Days" EntityType="Self.Days" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Kosher" EntityType="Self.Kosher" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Mother" EntityType="Self.Mother" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Roles" EntityType="Self.Roles" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ServiceAndDaysToVolunteer" EntityType="Self.ServiceAndDaysToVolunteer" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ServiceManagementToBirth" EntityType="Self.ServiceManagementToBirth" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Services" EntityType="Self.Services" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ServiceVolunteerToBirth" EntityType="Self.ServiceVolunteerToBirth" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Volunteer" EntityType="Self.Volunteer" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Birth_Mother" Association="Self.FK_Birth_Mother">
+            <End Role="Mother" EntitySet="Mother" />
+            <End Role="Birth" EntitySet="Birth" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DaysToVolunteer_Volunteer" Association="Self.FK_DaysToVolunteer_Volunteer">
+            <End Role="Volunteer" EntitySet="Volunteer" />
+            <End Role="ServiceAndDaysToVolunteer" EntitySet="ServiceAndDaysToVolunteer" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Mother_Kosher" Association="Self.FK_Mother_Kosher">
+            <End Role="Kosher" EntitySet="Kosher" />
+            <End Role="Mother" EntitySet="Mother" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Mother_Kosher1" Association="Self.FK_Mother_Kosher1">
+            <End Role="Kosher" EntitySet="Kosher" />
+            <End Role="Mother" EntitySet="Mother" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Mother_Kosher2" Association="Self.FK_Mother_Kosher2">
+            <End Role="Kosher" EntitySet="Kosher" />
+            <End Role="Mother" EntitySet="Mother" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Mother_Users" Association="Self.FK_Mother_Users">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Mother" EntitySet="Mother" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ServiceAndDaysToVolunteer_Days" Association="Self.FK_ServiceAndDaysToVolunteer_Days">
+            <End Role="Days" EntitySet="Days" />
+            <End Role="ServiceAndDaysToVolunteer" EntitySet="ServiceAndDaysToVolunteer" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ServiceAndDaysToVolunteer_Services" Association="Self.FK_ServiceAndDaysToVolunteer_Services">
+            <End Role="Services" EntitySet="Services" />
+            <End Role="ServiceAndDaysToVolunteer" EntitySet="ServiceAndDaysToVolunteer" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ServiceManagementToBirth_Birth" Association="Self.FK_ServiceManagementToBirth_Birth">
+            <End Role="Birth" EntitySet="Birth" />
+            <End Role="ServiceManagementToBirth" EntitySet="ServiceManagementToBirth" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ServiceVolunteerToBirth_ServiceManagementToBirth" Association="Self.FK_ServiceVolunteerToBirth_ServiceManagementToBirth">
+            <End Role="ServiceManagementToBirth" EntitySet="ServiceManagementToBirth" />
+            <End Role="ServiceVolunteerToBirth" EntitySet="ServiceVolunteerToBirth" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Users_Roles1" Association="Self.FK_Users_Roles1">
+            <End Role="Roles" EntitySet="Roles" />
+            <End Role="Users" EntitySet="Users" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Volunteer_Users" Association="Self.FK_Volunteer_Users">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Volunteer" EntitySet="Volunteer" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="EZER_LAYOLEDETModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Birth">
+          <Key>
+            <PropertyRef Name="BirthId" />
+          </Key>
+          <Property Name="UserId" Type="Int64" Nullable="false" />
+          <Property Name="BirthDateOfBaby" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="BoyOrGirl" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="NumOfBabies" Type="Int64" />
+          <Property Name="BirthId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="Mother" Relationship="Self.FK_Birth_Mother" FromRole="Birth" ToRole="Mother" />
+          <NavigationProperty Name="ServiceManagementToBirth" Relationship="Self.FK_ServiceManagementToBirth_Birth" FromRole="Birth" ToRole="ServiceManagementToBirth" />
+        </EntityType>
+        <EntityType Name="Days">
+          <Key>
+            <PropertyRef Name="DayId" />
+          </Key>
+          <Property Name="DayId" Type="Int64" Nullable="false" />
+          <Property Name="Describe" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="ServiceAndDaysToVolunteer" Relationship="Self.FK_ServiceAndDaysToVolunteer_Days" FromRole="Days" ToRole="ServiceAndDaysToVolunteer" />
+        </EntityType>
+        <EntityType Name="Kosher">
+          <Key>
+            <PropertyRef Name="KosherId" />
+          </Key>
+          <Property Name="KosherId" Type="Int64" Nullable="false" />
+          <Property Name="Describe" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Mother" Relationship="Self.FK_Mother_Kosher" FromRole="Kosher" ToRole="Mother" />
+          <NavigationProperty Name="Mother1" Relationship="Self.FK_Mother_Kosher1" FromRole="Kosher" ToRole="Mother" />
+          <NavigationProperty Name="Mother2" Relationship="Self.FK_Mother_Kosher2" FromRole="Kosher" ToRole="Mother" />
+        </EntityType>
+        <EntityType Name="Mother">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="UserId" Type="Int64" Nullable="false" />
+          <Property Name="NumOfChildren" Type="Int32" />
+          <Property Name="Kosher1" Type="Int64" />
+          <Property Name="Kosher2" Type="Int64" />
+          <Property Name="Kosher3" Type="Int64" />
+          <NavigationProperty Name="Birth" Relationship="Self.FK_Birth_Mother" FromRole="Mother" ToRole="Birth" />
+          <NavigationProperty Name="Kosher" Relationship="Self.FK_Mother_Kosher" FromRole="Mother" ToRole="Kosher" />
+          <NavigationProperty Name="Kosher4" Relationship="Self.FK_Mother_Kosher1" FromRole="Mother" ToRole="Kosher" />
+          <NavigationProperty Name="Kosher5" Relationship="Self.FK_Mother_Kosher2" FromRole="Mother" ToRole="Kosher" />
+          <NavigationProperty Name="Users" Relationship="Self.FK_Mother_Users" FromRole="Mother" ToRole="Users" />
+        </EntityType>
+        <EntityType Name="Roles">
+          <Key>
+            <PropertyRef Name="RoleId" />
+          </Key>
+          <Property Name="RoleId" Type="Int64" Nullable="false" />
+          <Property Name="Describe" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Users" Relationship="Self.FK_Users_Roles1" FromRole="Roles" ToRole="Users" />
+        </EntityType>
+        <EntityType Name="ServiceAndDaysToVolunteer">
+          <Key>
+            <PropertyRef Name="ServiceAndDaysToVolunteerId" />
+          </Key>
+          <Property Name="UserId" Type="Int64" Nullable="false" />
+          <Property Name="BeginningTime" Type="Time" Precision="7" />
+          <Property Name="EndTime" Type="Time" Precision="7" />
+          <Property Name="ServiceId" Type="Int64" Nullable="false" />
+          <Property Name="ServiceAndDaysToVolunteerId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DayId" Type="Int64" />
+          <NavigationProperty Name="Days" Relationship="Self.FK_ServiceAndDaysToVolunteer_Days" FromRole="ServiceAndDaysToVolunteer" ToRole="Days" />
+          <NavigationProperty Name="Volunteer" Relationship="Self.FK_DaysToVolunteer_Volunteer" FromRole="ServiceAndDaysToVolunteer" ToRole="Volunteer" />
+          <NavigationProperty Name="Services" Relationship="Self.FK_ServiceAndDaysToVolunteer_Services" FromRole="ServiceAndDaysToVolunteer" ToRole="Services" />
+        </EntityType>
+        <EntityType Name="ServiceManagementToBirth">
+          <Key>
+            <PropertyRef Name="ServiceId" />
+          </Key>
+          <Property Name="BirthId" Type="Int64" Nullable="false" />
+          <Property Name="BirthDateOfService" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="BeginningTime" Type="Time" Precision="7" />
+          <Property Name="EndTime" Type="Time" Precision="7" />
+          <Property Name="ServiceId" Type="Int64" Nullable="false" />
+          <Property Name="StatusRequest" Type="Int32" Nullable="false" />
+          <Property Name="ServiceManagementId" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="Birth" Relationship="Self.FK_ServiceManagementToBirth_Birth" FromRole="ServiceManagementToBirth" ToRole="Birth" />
+          <NavigationProperty Name="ServiceVolunteerToBirth" Relationship="Self.FK_ServiceVolunteerToBirth_ServiceManagementToBirth" FromRole="ServiceManagementToBirth" ToRole="ServiceVolunteerToBirth" />
+        </EntityType>
+        <EntityType Name="Services">
+          <Key>
+            <PropertyRef Name="ServiceId" />
+          </Key>
+          <Property Name="ServiceId" Type="Int64" Nullable="false" />
+          <Property Name="Describe" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="ServiceAndDaysToVolunteer" Relationship="Self.FK_ServiceAndDaysToVolunteer_Services" FromRole="Services" ToRole="ServiceAndDaysToVolunteer" />
+        </EntityType>
+        <EntityType Name="ServiceVolunteerToBirth">
+          <Key>
+            <PropertyRef Name="ServiceId" />
+          </Key>
+          <Property Name="ServiceId" Type="Int64" Nullable="false" />
+          <Property Name="VolunteerId" Type="Int64" Nullable="false" />
+          <Property Name="MotherId" Type="Int64" Nullable="false" />
+          <Property Name="BirthId" Type="Int64" Nullable="false" />
+          <Property Name="DateItWas" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="BeginningTime" Type="Time" Precision="7" />
+          <Property Name="EndTime" Type="Time" Precision="7" />
+          <NavigationProperty Name="ServiceManagementToBirth" Relationship="Self.FK_ServiceVolunteerToBirth_ServiceManagementToBirth" FromRole="ServiceVolunteerToBirth" ToRole="ServiceManagementToBirth" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="UserId" Type="Int64" Nullable="false" />
+          <Property Name="RoleId" Type="Int64" Nullable="false" />
+          <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Phone" Type="Int64" Nullable="false" />
+          <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NumOfHouse" Type="Int64" Nullable="false" />
+          <Property Name="Locality" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="BirthDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Active" Type="Int32" Nullable="false" />
+          <Property Name="FirstName" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Mother" Relationship="Self.FK_Mother_Users" FromRole="Users" ToRole="Mother" />
+          <NavigationProperty Name="Roles" Relationship="Self.FK_Users_Roles1" FromRole="Users" ToRole="Roles" />
+          <NavigationProperty Name="Volunteer" Relationship="Self.FK_Volunteer_Users" FromRole="Users" ToRole="Volunteer" />
+        </EntityType>
+        <EntityType Name="Volunteer">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="UserId" Type="Int64" Nullable="false" />
+          <NavigationProperty Name="ServiceAndDaysToVolunteer" Relationship="Self.FK_DaysToVolunteer_Volunteer" FromRole="Volunteer" ToRole="ServiceAndDaysToVolunteer" />
+          <NavigationProperty Name="Users" Relationship="Self.FK_Volunteer_Users" FromRole="Volunteer" ToRole="Users" />
+        </EntityType>
+        <Association Name="FK_Birth_Mother">
+          <End Role="Mother" Type="Self.Mother" Multiplicity="1" />
+          <End Role="Birth" Type="Self.Birth" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Mother">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="Birth">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ServiceManagementToBirth_Birth">
+          <End Role="Birth" Type="Self.Birth" Multiplicity="1" />
+          <End Role="ServiceManagementToBirth" Type="Self.ServiceManagementToBirth" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Birth">
+              <PropertyRef Name="BirthId" />
+            </Principal>
+            <Dependent Role="ServiceManagementToBirth">
+              <PropertyRef Name="BirthId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ServiceAndDaysToVolunteer_Days">
+          <End Role="Days" Type="Self.Days" Multiplicity="0..1" />
+          <End Role="ServiceAndDaysToVolunteer" Type="Self.ServiceAndDaysToVolunteer" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Days">
+              <PropertyRef Name="DayId" />
+            </Principal>
+            <Dependent Role="ServiceAndDaysToVolunteer">
+              <PropertyRef Name="DayId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Mother_Kosher">
+          <End Role="Kosher" Type="Self.Kosher" Multiplicity="0..1" />
+          <End Role="Mother" Type="Self.Mother" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Kosher">
+              <PropertyRef Name="KosherId" />
+            </Principal>
+            <Dependent Role="Mother">
+              <PropertyRef Name="Kosher1" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Mother_Kosher1">
+          <End Role="Kosher" Type="Self.Kosher" Multiplicity="0..1" />
+          <End Role="Mother" Type="Self.Mother" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Kosher">
+              <PropertyRef Name="KosherId" />
+            </Principal>
+            <Dependent Role="Mother">
+              <PropertyRef Name="Kosher2" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Mother_Kosher2">
+          <End Role="Kosher" Type="Self.Kosher" Multiplicity="0..1" />
+          <End Role="Mother" Type="Self.Mother" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Kosher">
+              <PropertyRef Name="KosherId" />
+            </Principal>
+            <Dependent Role="Mother">
+              <PropertyRef Name="Kosher3" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Mother_Users">
+          <End Role="Users" Type="Self.Users" Multiplicity="1" />
+          <End Role="Mother" Type="Self.Mother" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="Mother">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Users_Roles1">
+          <End Role="Roles" Type="Self.Roles" Multiplicity="1" />
+          <End Role="Users" Type="Self.Users" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Roles">
+              <PropertyRef Name="RoleId" />
+            </Principal>
+            <Dependent Role="Users">
+              <PropertyRef Name="RoleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DaysToVolunteer_Volunteer">
+          <End Role="Volunteer" Type="Self.Volunteer" Multiplicity="1" />
+          <End Role="ServiceAndDaysToVolunteer" Type="Self.ServiceAndDaysToVolunteer" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Volunteer">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="ServiceAndDaysToVolunteer">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ServiceAndDaysToVolunteer_Services">
+          <End Role="Services" Type="Self.Services" Multiplicity="1" />
+          <End Role="ServiceAndDaysToVolunteer" Type="Self.ServiceAndDaysToVolunteer" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Services">
+              <PropertyRef Name="ServiceId" />
+            </Principal>
+            <Dependent Role="ServiceAndDaysToVolunteer">
+              <PropertyRef Name="ServiceId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ServiceVolunteerToBirth_ServiceManagementToBirth">
+          <End Role="ServiceManagementToBirth" Type="Self.ServiceManagementToBirth" Multiplicity="1" />
+          <End Role="ServiceVolunteerToBirth" Type="Self.ServiceVolunteerToBirth" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="ServiceManagementToBirth">
+              <PropertyRef Name="ServiceId" />
+            </Principal>
+            <Dependent Role="ServiceVolunteerToBirth">
+              <PropertyRef Name="ServiceId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Volunteer_Users">
+          <End Role="Users" Type="Self.Users" Multiplicity="1" />
+          <End Role="Volunteer" Type="Self.Volunteer" Multiplicity="0..1" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="Volunteer">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="EZER_LAYOLEDETEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Birth" EntityType="Self.Birth" />
+          <EntitySet Name="Days" EntityType="Self.Days" />
+          <EntitySet Name="Kosher" EntityType="Self.Kosher" />
+          <EntitySet Name="Mother" EntityType="Self.Mother" />
+          <EntitySet Name="Roles" EntityType="Self.Roles" />
+          <EntitySet Name="ServiceAndDaysToVolunteer" EntityType="Self.ServiceAndDaysToVolunteer" />
+          <EntitySet Name="ServiceManagementToBirth" EntityType="Self.ServiceManagementToBirth" />
+          <EntitySet Name="Services" EntityType="Self.Services" />
+          <EntitySet Name="ServiceVolunteerToBirth" EntityType="Self.ServiceVolunteerToBirth" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+          <EntitySet Name="Users" EntityType="Self.Users" />
+          <EntitySet Name="Volunteer" EntityType="Self.Volunteer" />
+          <AssociationSet Name="FK_Birth_Mother" Association="Self.FK_Birth_Mother">
+            <End Role="Mother" EntitySet="Mother" />
+            <End Role="Birth" EntitySet="Birth" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ServiceManagementToBirth_Birth" Association="Self.FK_ServiceManagementToBirth_Birth">
+            <End Role="Birth" EntitySet="Birth" />
+            <End Role="ServiceManagementToBirth" EntitySet="ServiceManagementToBirth" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ServiceAndDaysToVolunteer_Days" Association="Self.FK_ServiceAndDaysToVolunteer_Days">
+            <End Role="Days" EntitySet="Days" />
+            <End Role="ServiceAndDaysToVolunteer" EntitySet="ServiceAndDaysToVolunteer" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Mother_Kosher" Association="Self.FK_Mother_Kosher">
+            <End Role="Kosher" EntitySet="Kosher" />
+            <End Role="Mother" EntitySet="Mother" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Mother_Kosher1" Association="Self.FK_Mother_Kosher1">
+            <End Role="Kosher" EntitySet="Kosher" />
+            <End Role="Mother" EntitySet="Mother" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Mother_Kosher2" Association="Self.FK_Mother_Kosher2">
+            <End Role="Kosher" EntitySet="Kosher" />
+            <End Role="Mother" EntitySet="Mother" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Mother_Users" Association="Self.FK_Mother_Users">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Mother" EntitySet="Mother" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Users_Roles1" Association="Self.FK_Users_Roles1">
+            <End Role="Roles" EntitySet="Roles" />
+            <End Role="Users" EntitySet="Users" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DaysToVolunteer_Volunteer" Association="Self.FK_DaysToVolunteer_Volunteer">
+            <End Role="Volunteer" EntitySet="Volunteer" />
+            <End Role="ServiceAndDaysToVolunteer" EntitySet="ServiceAndDaysToVolunteer" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ServiceAndDaysToVolunteer_Services" Association="Self.FK_ServiceAndDaysToVolunteer_Services">
+            <End Role="Services" EntitySet="Services" />
+            <End Role="ServiceAndDaysToVolunteer" EntitySet="ServiceAndDaysToVolunteer" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ServiceVolunteerToBirth_ServiceManagementToBirth" Association="Self.FK_ServiceVolunteerToBirth_ServiceManagementToBirth">
+            <End Role="ServiceManagementToBirth" EntitySet="ServiceManagementToBirth" />
+            <End Role="ServiceVolunteerToBirth" EntitySet="ServiceVolunteerToBirth" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Volunteer_Users" Association="Self.FK_Volunteer_Users">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="Volunteer" EntitySet="Volunteer" />
+          </AssociationSet>
+          <FunctionImport Name="AllRequest" ReturnType="Collection(EZER_LAYOLEDETModel.AllRequest_Result)" />
+          <FunctionImport Name="GetRequestByDay" ReturnType="Collection(EZER_LAYOLEDETModel.GetRequestByDay_Result)">
+            <Parameter Name="DayId" Mode="In" Type="Int64" />
+          </FunctionImport>
+          <FunctionImport Name="GetRequestByService" ReturnType="Collection(EZER_LAYOLEDETModel.GetRequestByService_Result)">
+            <Parameter Name="ServiceId" Mode="In" Type="Int64" />
+          </FunctionImport>
+          <FunctionImport Name="selectMotherByServiceAndDay" ReturnType="Collection(EZER_LAYOLEDETModel.selectMotherByServiceAndDay_Result)">
+            <Parameter Name="VolunteerId" Mode="In" Type="Int64" />
+          </FunctionImport>
+          <FunctionImport Name="SelectVolunteerByServiceAndDayNew" ReturnType="Collection(EZER_LAYOLEDETModel.SelectVolunteerByServiceAndDayNew_Result)">
+            <Parameter Name="motherId" Mode="In" Type="Int64" />
+          </FunctionImport>
+          <FunctionImport Name="SelectVolunteerByServiceNew" ReturnType="Collection(EZER_LAYOLEDETModel.SelectVolunteerByServiceNew_Result)">
+            <Parameter Name="UserId" Mode="In" Type="Int64" />
+          </FunctionImport>
+          <FunctionImport Name="sp_alterdiagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="version" Mode="In" Type="Int32" />
+            <Parameter Name="definition" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="sp_creatediagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="version" Mode="In" Type="Int32" />
+            <Parameter Name="definition" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="sp_dropdiagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(EZER_LAYOLEDETModel.sp_helpdiagramdefinition_Result)">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(EZER_LAYOLEDETModel.sp_helpdiagrams_Result)">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_renamediagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="new_diagramname" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_upgraddiagrams" />
+          <FunctionImport Name="VolunteerApproval" ReturnType="Collection(EZER_LAYOLEDETModel.VolunteerApproval_Result)">
+            <Parameter Name="ServiceManagmentId" Mode="In" Type="Int64" />
+            <Parameter Name="VolunteerId" Mode="In" Type="Int64" />
+          </FunctionImport>
+        </EntityContainer>
+        <ComplexType Name="AllRequest_Result">
+          <Property Type="Int64" Name="ServiceId" Nullable="false" />
+          <Property Type="DateTime" Name="BirthDateOfService" Nullable="false" />
+          <Property Type="Int64" Name="BirthId" Nullable="false" />
+          <Property Type="Time" Name="BeginningTime" Nullable="true" />
+          <Property Type="Time" Name="EndTime" Nullable="true" />
+          <Property Type="Int64" Name="ServiceManagementId" Nullable="false" />
+          <Property Type="Int32" Name="StatusRequest" Nullable="false" />
+          <Property Type="String" Name="Describe" Nullable="true" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="GetRequestByDay_Result">
+          <Property Type="Int64" Name="ServiceId" Nullable="false" />
+          <Property Type="DateTime" Name="BirthDateOfService" Nullable="false" />
+          <Property Type="Int64" Name="BirthId" Nullable="false" />
+          <Property Type="Time" Name="BeginningTime" Nullable="true" />
+          <Property Type="Time" Name="EndTime" Nullable="true" />
+          <Property Type="Int64" Name="ServiceManagementId" Nullable="false" />
+          <Property Type="Int32" Name="StatusRequest" Nullable="false" />
+          <Property Type="String" Name="Describe" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="DayId" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="GetRequestByService_Result">
+          <Property Type="Int64" Name="ServiceId" Nullable="false" />
+          <Property Type="DateTime" Name="BirthDateOfService" Nullable="false" />
+          <Property Type="Int64" Name="BirthId" Nullable="false" />
+          <Property Type="Time" Name="BeginningTime" Nullable="true" />
+          <Property Type="Time" Name="EndTime" Nullable="true" />
+          <Property Type="Int64" Name="ServiceManagementId" Nullable="false" />
+          <Property Type="Int32" Name="StatusRequest" Nullable="false" />
+          <Property Type="String" Name="Describe" Nullable="true" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="selectMotherByServiceAndDay_Result">
+          <Property Type="Int64" Name="volunteerId" Nullable="false" />
+          <Property Type="String" Name="DescribeDay" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="DescribeService" Nullable="true" MaxLength="50" />
+          <Property Type="DateTime" Name="BirthDateOfService" Nullable="false" />
+          <Property Type="Int64" Name="ServiceManagementId" Nullable="false" />
+          <Property Type="String" Name="MotherEmail" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="MotherName" Nullable="true" MaxLength="20" />
+          <Property Type="Int32" Name="StatusRequest" Nullable="false" />
+          <Property Type="Int64" Name="motherId" Nullable="false" />
+          <Property Type="Int64" Name="BirthId" Nullable="false" />
+          <Property Type="String" Name="volunteerEmail" Nullable="false" MaxLength="50" />
+        </ComplexType>
+        <ComplexType Name="SelectVolunteerByServiceAndDayNew_Result">
+          <Property Type="Int64" Name="volunteerId" Nullable="false" />
+          <Property Type="String" Name="DescribeDay" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="DescribeService" Nullable="true" MaxLength="50" />
+          <Property Type="DateTime" Name="BirthDateOfService" Nullable="false" />
+          <Property Type="Int64" Name="ServiceManagementId" Nullable="false" />
+          <Property Type="String" Name="volunteerEmail" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="volunteerName" Nullable="true" MaxLength="20" />
+          <Property Type="Int32" Name="StatusRequest" Nullable="false" />
+          <Property Type="Int64" Name="motherId" Nullable="false" />
+          <Property Type="Int64" Name="BirthId" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="SelectVolunteerByServiceNew_Result">
+          <Property Type="Int64" Name="volunteer" Nullable="false" />
+          <Property Type="Int64" Name="BirthId" Nullable="false" />
+          <Property Type="Int64" Name="mother" Nullable="false" />
+          <Property Type="Int64" Name="ServiceManagementId" Nullable="false" />
+          <Property Type="Int32" Name="StatusRequest" Nullable="false" />
+          <Property Type="String" Name="MotherEmail" Nullable="false" MaxLength="50" />
+          <Property Type="Int64" Name="DayId" Nullable="true" />
+          <Property Type="Int32" Name="MotherDay" Nullable="true" />
+          <Property Type="String" Name="VolunteerName" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="TheService" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="volunteerEmail" Nullable="false" MaxLength="50" />
+          <Property Type="Int64" Name="serviceId" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="sp_helpdiagramdefinition_Result">
+          <Property Type="Int32" Name="version" Nullable="true" />
+          <Property Type="Binary" Name="definition" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="sp_helpdiagrams_Result">
+          <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+          <Property Type="Int32" Name="OwnerID" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="VolunteerApproval_Result">
+          <Property Type="String" Name="MotherEmail" Nullable="false" MaxLength="50" />
+          <Property Type="String" Name="MotherFirstName" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="MotherLastName" Nullable="false" MaxLength="50" />
+          <Property Type="Int64" Name="MotherPhone" Nullable="false" />
+          <Property Type="String" Name="MotherAddress" Nullable="false" MaxLength="50" />
+          <Property Type="Int64" Name="MotherNumOfHouse" Nullable="false" />
+          <Property Type="String" Name="DescribeVolunteer" Nullable="true" MaxLength="50" />
+          <Property Type="Time" Name="BeginningTime" Nullable="true" />
+          <Property Type="String" Name="VolunteerName" Nullable="true" MaxLength="20" />
+          <Property Type="Int64" Name="VolunteerPhone" Nullable="false" />
+          <Property Type="Int64" Name="BirthId" Nullable="false" />
+          <Property Type="Int64" Name="ServiceId" Nullable="false" />
+          <Property Type="Int64" Name="MotherId" Nullable="false" />
+          <Property Type="Time" Name="EndTime" Nullable="true" />
+          <Property Type="DateTime" Name="BirthDateOfService" Nullable="false" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="EZER_LAYOLEDETModelStoreContainer" CdmEntityContainer="EZER_LAYOLEDETEntities">
+          <EntitySetMapping Name="Birth">
+            <EntityTypeMapping TypeName="EZER_LAYOLEDETModel.Birth">
+              <MappingFragment StoreEntitySet="Birth">
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="BirthDateOfBaby" ColumnName="BirthDateOfBaby" />
+                <ScalarProperty Name="BoyOrGirl" ColumnName="BoyOrGirl" />
+                <ScalarProperty Name="NumOfBabies" ColumnName="NumOfBabies" />
+                <ScalarProperty Name="BirthId" ColumnName="BirthId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Days">
+            <EntityTypeMapping TypeName="EZER_LAYOLEDETModel.Days">
+              <MappingFragment StoreEntitySet="Days">
+                <ScalarProperty Name="DayId" ColumnName="DayId" />
+                <ScalarProperty Name="Describe" ColumnName="Describe" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Kosher">
+            <EntityTypeMapping TypeName="EZER_LAYOLEDETModel.Kosher">
+              <MappingFragment StoreEntitySet="Kosher">
+                <ScalarProperty Name="KosherId" ColumnName="KosherId" />
+                <ScalarProperty Name="Describe" ColumnName="Describe" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Mother">
+            <EntityTypeMapping TypeName="EZER_LAYOLEDETModel.Mother">
+              <MappingFragment StoreEntitySet="Mother">
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="NumOfChildren" ColumnName="NumOfChildren" />
+                <ScalarProperty Name="Kosher1" ColumnName="Kosher1" />
+                <ScalarProperty Name="Kosher2" ColumnName="Kosher2" />
+                <ScalarProperty Name="Kosher3" ColumnName="Kosher3" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Roles">
+            <EntityTypeMapping TypeName="EZER_LAYOLEDETModel.Roles">
+              <MappingFragment StoreEntitySet="Roles">
+                <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+                <ScalarProperty Name="Describe" ColumnName="Describe" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ServiceAndDaysToVolunteer">
+            <EntityTypeMapping TypeName="EZER_LAYOLEDETModel.ServiceAndDaysToVolunteer">
+              <MappingFragment StoreEntitySet="ServiceAndDaysToVolunteer">
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="BeginningTime" ColumnName="BeginningTime" />
+                <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+                <ScalarProperty Name="ServiceId" ColumnName="ServiceId" />
+                <ScalarProperty Name="ServiceAndDaysToVolunteerId" ColumnName="ServiceAndDaysToVolunteerId" />
+                <ScalarProperty Name="DayId" ColumnName="DayId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ServiceManagementToBirth">
+            <EntityTypeMapping TypeName="EZER_LAYOLEDETModel.ServiceManagementToBirth">
+              <MappingFragment StoreEntitySet="ServiceManagementToBirth">
+                <ScalarProperty Name="BirthId" ColumnName="BirthId" />
+                <ScalarProperty Name="BirthDateOfService" ColumnName="BirthDateOfService" />
+                <ScalarProperty Name="BeginningTime" ColumnName="BeginningTime" />
+                <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+                <ScalarProperty Name="ServiceId" ColumnName="ServiceId" />
+                <ScalarProperty Name="StatusRequest" ColumnName="StatusRequest" />
+                <ScalarProperty Name="ServiceManagementId" ColumnName="ServiceManagementId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Services">
+            <EntityTypeMapping TypeName="EZER_LAYOLEDETModel.Services">
+              <MappingFragment StoreEntitySet="Services">
+                <ScalarProperty Name="ServiceId" ColumnName="ServiceId" />
+                <ScalarProperty Name="Describe" ColumnName="Describe" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ServiceVolunteerToBirth">
+            <EntityTypeMapping TypeName="EZER_LAYOLEDETModel.ServiceVolunteerToBirth">
+              <MappingFragment StoreEntitySet="ServiceVolunteerToBirth">
+                <ScalarProperty Name="ServiceId" ColumnName="ServiceId" />
+                <ScalarProperty Name="VolunteerId" ColumnName="VolunteerId" />
+                <ScalarProperty Name="MotherId" ColumnName="MotherId" />
+                <ScalarProperty Name="BirthId" ColumnName="BirthId" />
+                <ScalarProperty Name="DateItWas" ColumnName="DateItWas" />
+                <ScalarProperty Name="BeginningTime" ColumnName="BeginningTime" />
+                <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="EZER_LAYOLEDETModel.sysdiagrams">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="EZER_LAYOLEDETModel.Users">
+              <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="NumOfHouse" ColumnName="NumOfHouse" />
+                <ScalarProperty Name="Locality" ColumnName="Locality" />
+                <ScalarProperty Name="BirthDate" ColumnName="BirthDate" />
+                <ScalarProperty Name="Active" ColumnName="Active" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Volunteer">
+            <EntityTypeMapping TypeName="EZER_LAYOLEDETModel.Volunteer">
+              <MappingFragment StoreEntitySet="Volunteer">
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="AllRequest" FunctionName="EZER_LAYOLEDETModel.Store.AllRequest">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="EZER_LAYOLEDETModel.AllRequest_Result">
+                <ScalarProperty Name="ServiceId" ColumnName="ServiceId" />
+                <ScalarProperty Name="BirthDateOfService" ColumnName="BirthDateOfService" />
+                <ScalarProperty Name="BirthId" ColumnName="BirthId" />
+                <ScalarProperty Name="BeginningTime" ColumnName="BeginningTime" />
+                <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+                <ScalarProperty Name="ServiceManagementId" ColumnName="ServiceManagementId" />
+                <ScalarProperty Name="StatusRequest" ColumnName="StatusRequest" />
+                <ScalarProperty Name="Describe" ColumnName="Describe" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GetRequestByDay" FunctionName="EZER_LAYOLEDETModel.Store.GetRequestByDay">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="EZER_LAYOLEDETModel.GetRequestByDay_Result">
+                <ScalarProperty Name="ServiceId" ColumnName="ServiceId" />
+                <ScalarProperty Name="BirthDateOfService" ColumnName="BirthDateOfService" />
+                <ScalarProperty Name="BirthId" ColumnName="BirthId" />
+                <ScalarProperty Name="BeginningTime" ColumnName="BeginningTime" />
+                <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+                <ScalarProperty Name="ServiceManagementId" ColumnName="ServiceManagementId" />
+                <ScalarProperty Name="StatusRequest" ColumnName="StatusRequest" />
+                <ScalarProperty Name="Describe" ColumnName="Describe" />
+                <ScalarProperty Name="DayId" ColumnName="DayId" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GetRequestByService" FunctionName="EZER_LAYOLEDETModel.Store.GetRequestByService">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="EZER_LAYOLEDETModel.GetRequestByService_Result">
+                <ScalarProperty Name="ServiceId" ColumnName="ServiceId" />
+                <ScalarProperty Name="BirthDateOfService" ColumnName="BirthDateOfService" />
+                <ScalarProperty Name="BirthId" ColumnName="BirthId" />
+                <ScalarProperty Name="BeginningTime" ColumnName="BeginningTime" />
+                <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+                <ScalarProperty Name="ServiceManagementId" ColumnName="ServiceManagementId" />
+                <ScalarProperty Name="StatusRequest" ColumnName="StatusRequest" />
+                <ScalarProperty Name="Describe" ColumnName="Describe" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="selectMotherByServiceAndDay" FunctionName="EZER_LAYOLEDETModel.Store.selectMotherByServiceAndDay">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="EZER_LAYOLEDETModel.selectMotherByServiceAndDay_Result">
+                <ScalarProperty Name="volunteerId" ColumnName="volunteerId" />
+                <ScalarProperty Name="DescribeDay" ColumnName="DescribeDay" />
+                <ScalarProperty Name="DescribeService" ColumnName="DescribeService" />
+                <ScalarProperty Name="BirthDateOfService" ColumnName="BirthDateOfService" />
+                <ScalarProperty Name="ServiceManagementId" ColumnName="ServiceManagementId" />
+                <ScalarProperty Name="MotherEmail" ColumnName="MotherEmail" />
+                <ScalarProperty Name="MotherName" ColumnName="MotherName" />
+                <ScalarProperty Name="StatusRequest" ColumnName="StatusRequest" />
+                <ScalarProperty Name="motherId" ColumnName="motherId" />
+                <ScalarProperty Name="BirthId" ColumnName="BirthId" />
+                <ScalarProperty Name="volunteerEmail" ColumnName="volunteerEmail" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SelectVolunteerByServiceAndDayNew" FunctionName="EZER_LAYOLEDETModel.Store.SelectVolunteerByServiceAndDayNew">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="EZER_LAYOLEDETModel.SelectVolunteerByServiceAndDayNew_Result">
+                <ScalarProperty Name="volunteerId" ColumnName="volunteerId" />
+                <ScalarProperty Name="DescribeDay" ColumnName="DescribeDay" />
+                <ScalarProperty Name="DescribeService" ColumnName="DescribeService" />
+                <ScalarProperty Name="BirthDateOfService" ColumnName="BirthDateOfService" />
+                <ScalarProperty Name="ServiceManagementId" ColumnName="ServiceManagementId" />
+                <ScalarProperty Name="volunteerEmail" ColumnName="volunteerEmail" />
+                <ScalarProperty Name="volunteerName" ColumnName="volunteerName" />
+                <ScalarProperty Name="StatusRequest" ColumnName="StatusRequest" />
+                <ScalarProperty Name="motherId" ColumnName="motherId" />
+                <ScalarProperty Name="BirthId" ColumnName="BirthId" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="SelectVolunteerByServiceNew" FunctionName="EZER_LAYOLEDETModel.Store.SelectVolunteerByServiceNew">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="EZER_LAYOLEDETModel.SelectVolunteerByServiceNew_Result">
+                <ScalarProperty Name="volunteer" ColumnName="volunteer" />
+                <ScalarProperty Name="BirthId" ColumnName="BirthId" />
+                <ScalarProperty Name="mother" ColumnName="mother" />
+                <ScalarProperty Name="ServiceManagementId" ColumnName="ServiceManagementId" />
+                <ScalarProperty Name="StatusRequest" ColumnName="StatusRequest" />
+                <ScalarProperty Name="MotherEmail" ColumnName="MotherEmail" />
+                <ScalarProperty Name="DayId" ColumnName="DayId" />
+                <ScalarProperty Name="MotherDay" ColumnName="MotherDay" />
+                <ScalarProperty Name="VolunteerName" ColumnName="VolunteerName" />
+                <ScalarProperty Name="TheService" ColumnName="TheService" />
+                <ScalarProperty Name="volunteerEmail" ColumnName="volunteerEmail" />
+                <ScalarProperty Name="serviceId" ColumnName="serviceId" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="EZER_LAYOLEDETModel.Store.sp_alterdiagram" />
+          <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="EZER_LAYOLEDETModel.Store.sp_creatediagram" />
+          <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="EZER_LAYOLEDETModel.Store.sp_dropdiagram" />
+          <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="EZER_LAYOLEDETModel.Store.sp_helpdiagramdefinition">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="EZER_LAYOLEDETModel.sp_helpdiagramdefinition_Result">
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="EZER_LAYOLEDETModel.Store.sp_helpdiagrams">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="EZER_LAYOLEDETModel.sp_helpdiagrams_Result">
+                <ScalarProperty Name="Database" ColumnName="Database" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Owner" ColumnName="Owner" />
+                <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="EZER_LAYOLEDETModel.Store.sp_renamediagram" />
+          <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="EZER_LAYOLEDETModel.Store.sp_upgraddiagrams" />
+          <FunctionImportMapping FunctionImportName="VolunteerApproval" FunctionName="EZER_LAYOLEDETModel.Store.VolunteerApproval">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="EZER_LAYOLEDETModel.VolunteerApproval_Result">
+                <ScalarProperty Name="MotherEmail" ColumnName="MotherEmail" />
+                <ScalarProperty Name="MotherFirstName" ColumnName="MotherFirstName" />
+                <ScalarProperty Name="MotherLastName" ColumnName="MotherLastName" />
+                <ScalarProperty Name="MotherPhone" ColumnName="MotherPhone" />
+                <ScalarProperty Name="MotherAddress" ColumnName="MotherAddress" />
+                <ScalarProperty Name="MotherNumOfHouse" ColumnName="MotherNumOfHouse" />
+                <ScalarProperty Name="DescribeVolunteer" ColumnName="DescribeVolunteer" />
+                <ScalarProperty Name="BeginningTime" ColumnName="BeginningTime" />
+                <ScalarProperty Name="VolunteerName" ColumnName="VolunteerName" />
+                <ScalarProperty Name="VolunteerPhone" ColumnName="VolunteerPhone" />
+                <ScalarProperty Name="BirthId" ColumnName="BirthId" />
+                <ScalarProperty Name="ServiceId" ColumnName="ServiceId" />
+                <ScalarProperty Name="MotherId" ColumnName="MotherId" />
+                <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+                <ScalarProperty Name="BirthDateOfService" ColumnName="BirthDateOfService" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
